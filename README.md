@@ -26,7 +26,6 @@ Source assets are **1080px** wide; below they are shown at **300px** width with 
 
 <p align="center"><img src="assets/more.png" alt="More — extra tools and settings" width="300" height="626" /></p>
 
-To resize later, scale **width** and **height** together (keep `height ≈ width × (native_height ÷ 1080)`).
 
 ## Features
 
@@ -100,6 +99,3 @@ flutter pub get
 flutter build apk --release
 ```
 
-## Releases
-
-Use your repo’s **Releases** page on GitHub: create a tag (e.g. `v1.0.0`), write release notes, and attach `app-release.apk` (or split ABI builds) from `build/app/outputs/flutter-apk/`.
