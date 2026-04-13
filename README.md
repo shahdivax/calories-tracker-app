@@ -4,8 +4,6 @@ Local-first fitness app for **nutrition**, **workouts**, and **body metrics**. D
 
 ## Screenshots
 
-Source assets are **1080px** wide; below they are shown at **300px** width with **height** set per file so aspect ratio matches each PNG.
-
 **Dashboard** — overview and quick actions  
 
 <p align="center"><img src="assets/dash.png" alt="Dashboard — overview and quick actions" width="300" height="624" /></p>
