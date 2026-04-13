@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#2c2c2c",
+                    "on-primary": "#002c65",
+                    "primary-fixed-dim": "#5191ff",
+                    "tertiary-fixed-dim": "#e48fec",
+                    "on-primary-container": "#00214f",
+                    "inverse-primary": "#005bc2",
+                    "surface-container-highest": "#262626",
+                    "outline": "#777575",
+                    "error": "#ff716c",
+                    "on-error": "#490006",
+                    "on-tertiary-fixed": "#41004d",
+                    "tertiary-container": "#f39cfb",
+                    "on-secondary-container": "#d2d0cf",
+                    "on-tertiary": "#6b1f77",
+                    "surface-container-high": "#201f1f",
+                    "primary": "#85adff",
+                    "secondary": "#e4e2e1",
+                    "secondary-fixed-dim": "#d6d4d3",
+                    "tertiary-fixed": "#f39cfb",
+                    "on-secondary-fixed-variant": "#5c5b5b",
+                    "surface-tint": "#85adff",
+                    "on-tertiary-fixed-variant": "#6a1f76",
+                    "on-primary-fixed-variant": "#002a61",
+                    "on-surface-variant": "#adaaaa",
+                    "primary-dim": "#0070eb",
+                    "on-secondary": "#525252",
+                    "surface": "#0e0e0e",
+                    "error-container": "#9f0519",
+                    "on-tertiary-container": "#60136d",
+                    "surface-variant": "#262626",
+                    "on-primary-fixed": "#000000",
+                    "inverse-on-surface": "#565554",
+                    "error-dim": "#d7383b",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-surface": "#ffffff",
+                    "surface-container-low": "#131313",
+                    "background": "#0e0e0e",
+                    "surface-container": "#1a1919",
+                    "secondary-dim": "#d6d4d3",
+                    "on-error-container": "#ffa8a3",
+                    "surface-container-lowest": "#000000",
+                    "tertiary-dim": "#e48fec",
+                    "inverse-surface": "#fcf8f8",
+                    "primary-container": "#6c9fff",
+                    "surface-dim": "#0e0e0e",
+                    "tertiary": "#fab0ff",
+                    "secondary-container": "#474747",
+                    "outline-variant": "#494847",
+                    "on-secondary-fixed": "#3f3f3f",
+                    "primary-fixed": "#6c9fff",
+                    "on-background": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .glass { background: rgba(19, 19, 19, 0.7); backdrop-filter: blur(20px); }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .active-press:active { transform: scale(0.98); background-color: rgba(255, 255, 255, 0.05); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#0e0e0e]/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,0,0,0.4)] bg-gradient-to-b from-[#131313] to-transparent">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt1z1RFYeAhKQV7Z3hM4RWxmorCYyYdJvoWJOXA3dxa2z-QZzj-_GUni2FjRooZXlRWRYXAjHi7FIMstj5-TdLB0dRzJiyFk_8SWOCP7wLJQ1wrLYlXHT09vSqVi1y16mQkff537knA5YdQSKImzvO-V8m3cL132HmLyWQXPx4QvOvTyZVSOQu0BXQBVjrNkMZb1Q_vca491Q8yI9Ak3zdvhIlXr_GetL4rsiLyxvT4HXGXuGPVJx5HfuJfXPZEFsHIi8Xy-LUVdM"/>
+</div>
+<span class="font-headline font-bold tracking-tight text-white text-lg">Settings</span>
+</div>
+<button class="text-primary hover:opacity-80 transition-opacity active:scale-90 transition-transform">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</header>
+<main class="pt-24 pb-40 px-6 max-w-2xl mx-auto space-y-10">
+<!-- Body Profile Section -->
+<section class="space-y-4">
+<h3 class="px-2 text-primary font-label text-[11px] font-bold uppercase tracking-[0.15em]">Body Profile</h3>
+<div class="bg-surface-container-low rounded-lg p-6 border border-white/5 space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary-dim shadow-lg">
+<img alt="Alex Sterling" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt1z1RFYeAhKQV7Z3hM4RWxmorCYyYdJvoWJOXA3dxa2z-QZzj-_GUni2FjRooZXlRWRYXAjHi7FIMstj5-TdLB0dRzJiyFk_8SWOCP7wLJQ1wrLYlXHT09vSqVi1y16mQkff537knA5YdQSKImzvO-V8m3cL132HmLyWQXPx4QvOvTyZVSOQu0BXQBVjrNkMZb1Q_vca491Q8yI9Ak3zdvhIlXr_GetL4rsiLyxvT4HXGXuGPVJx5HfuJfXPZEFsHIi8Xy-LUVdM"/>
+</div>
+<div>
+<h2 class="font-headline text-xl font-extrabold tracking-tight">Alex Sterling</h2>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="bg-primary/10 text-primary font-label text-[10px] font-bold px-2 py-0.5 rounded-full border border-primary/20 uppercase tracking-wider">Level 42 Athlete</span>
+</div>
+</div>
+<button class="ml-auto text-on-surface-variant hover:text-white transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-high rounded-md p-4 border border-white/5">
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-wider mb-1 text-center">Height</p>
+<div class="flex items-baseline justify-center gap-1">
+<span class="font-headline text-2xl font-bold">188</span>
+<span class="text-on-surface-variant text-sm font-medium">cm</span>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-md p-4 border border-white/5">
+<p class="text-on-surface-variant font-label text-[10px] uppercase tracking-wider mb-1 text-center">Goal Weight</p>
+<div class="flex items-baseline justify-center gap-1">
+<span class="font-headline text-2xl font-bold">92.0</span>
+<span class="text-on-surface-variant text-sm font-medium">kg</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Configuration Section -->
+<section class="space-y-4">
+<h3 class="px-2 text-primary font-label text-[11px] font-bold uppercase tracking-[0.15em]">AI Configuration</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden border border-white/5">
+<button class="w-full relative overflow-hidden bg-surface-container-highest p-6 text-left group active:scale-[0.98] transition-all duration-200">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-lg">insights</span>
+<span class="font-label text-xs font-bold uppercase tracking-widest">Premium Active</span>
+</div>
+<h2 class="font-headline text-lg font-bold mb-1">Deep Analytics AI</h2>
+<p class="text-on-surface-variant text-sm max-w-[200px]">Advanced metabolic heatmap &amp; trend forecasting.</p>
+</div>
+<div class="mt-4 h-1 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-gradient-to-r from-primary-dim to-primary rounded-full"></div>
+</div>
+</button>
+<div class="flex items-center justify-between p-4 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div>
+<p class="font-medium text-sm">Personal Trainer AI</p>
+<p class="text-xs text-on-surface-variant">Adaptive workout intensity logic</p>
+</div>
+</div>
+<div class="w-10 h-5 bg-primary-dim rounded-full relative flex items-center px-1">
+<div class="w-3 h-3 bg-white rounded-full ml-auto"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- App Preferences Section -->
+<section class="space-y-4">
+<h3 class="px-2 text-primary font-label text-[11px] font-bold uppercase tracking-[0.15em]">App Preferences</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden border border-white/5">
+<!-- Theme Toggle -->
+<div class="flex items-center justify-between p-4 border-b border-white/5 active:bg-white/[0.03] transition-all cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dark_mode</span>
+</div>
+<div>
+<p class="font-medium text-sm">OLED Dark Mode</p>
+<p class="text-xs text-on-surface-variant">Kinetic Noir Active</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-primary-dim rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-white rounded-full ml-auto shadow-lg"></div>
+</div>
+</div>
+<!-- Units -->
+<div class="flex items-center justify-between p-4 border-b border-white/5 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">straighten</span>
+</div>
+<div>
+<p class="font-medium text-sm">Measurement Units</p>
+<p class="text-xs text-on-surface-variant">Metric (kg, cm, km)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">chevron_right</span>
+</div>
+<!-- Language -->
+<div class="flex items-center justify-between p-4 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">language</span>
+</div>
+<div>
+<p class="font-medium text-sm">App Language</p>
+<p class="text-xs text-on-surface-variant">English (US)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Data Management Section -->
+<section class="space-y-4">
+<h3 class="px-2 text-primary font-label text-[11px] font-bold uppercase tracking-[0.15em]">Data Management</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden border border-white/5">
+<div class="flex items-center justify-between p-4 border-b border-white/5 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">file_export</span>
+</div>
+<div>
+<p class="font-medium text-sm">Export Data</p>
+<p class="text-xs text-on-surface-variant">Download .CSV workout history</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-4 border-b border-white/5 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">sync</span>
+</div>
+<div>
+<p class="font-medium text-sm">External Sync</p>
+<p class="text-xs text-on-surface-variant">Garmin &amp; Apple Health</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm text-primary">connected_tv</span>
+</div>
+<div class="flex items-center justify-between p-4 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined">key</span>
+</div>
+<div>
+<p class="font-medium text-sm">Developer API</p>
+<p class="text-xs text-on-surface-variant">Personal access tokens</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Danger Zone -->
+<section class="space-y-4 pt-4">
+<div class="bg-surface-container-low rounded-lg overflow-hidden border border-error/20">
+<button class="w-full flex items-center gap-4 p-4 hover:bg-error/5 active:bg-error/10 transition-all text-error group">
+<div class="w-10 h-10 flex items-center justify-center bg-error/10 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl">delete_forever</span>
+</div>
+<div class="text-left">
+<p class="font-bold text-sm">Reset Application</p>
+<p class="text-[10px] text-error/60 uppercase tracking-tighter">Permanently wipe all local profile data</p>
+</div>
+</button>
+</div>
+</section>
+<div class="pt-8 text-center space-y-2">
+<p class="text-[10px] text-on-surface-variant uppercase tracking-[0.2em] opacity-40">
+                Kinetic Monolith v2.4.0 (Build 982)
+            </p>
+<p class="text-[9px] text-primary/40 uppercase tracking-widest font-bold">Developed by Cobalt Dynamics</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#131313]/90 backdrop-blur-2xl rounded-t-[2.5rem] border-t border-white/5 shadow-[0px_-10px_30px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:text-white transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">dashboard</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase">Dash</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:text-white transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">restaurant</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase">Eats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:text-white transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">fitness_center</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase">Gym</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:text-white transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1 text-2xl">monitoring</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary/10 text-primary rounded-2xl px-5 py-2 scale-105 border border-primary/20 transition-all" href="#">
+<span class="material-symbols-outlined mb-0.5 text-2xl" style="font-variation-settings: 'FILL' 1;">more_horiz</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase">More</span>
+</a>
+</nav>
+</body></html>

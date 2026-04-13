@@ -1,0 +1,293 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#2c2c2c",
+                    "on-primary": "#002c65",
+                    "primary-fixed-dim": "#5191ff",
+                    "tertiary-fixed-dim": "#e48fec",
+                    "on-primary-container": "#00214f",
+                    "inverse-primary": "#005bc2",
+                    "surface-container-highest": "#262626",
+                    "outline": "#777575",
+                    "error": "#ff716c",
+                    "on-error": "#490006",
+                    "on-tertiary-fixed": "#41004d",
+                    "tertiary-container": "#f39cfb",
+                    "on-secondary-container": "#d2d0cf",
+                    "on-tertiary": "#6b1f77",
+                    "surface-container-high": "#201f1f",
+                    "primary": "#85adff",
+                    "secondary": "#e4e2e1",
+                    "secondary-fixed-dim": "#d6d4d3",
+                    "tertiary-fixed": "#f39cfb",
+                    "on-secondary-fixed-variant": "#5c5b5b",
+                    "surface-tint": "#85adff",
+                    "on-tertiary-fixed-variant": "#6a1f76",
+                    "on-primary-fixed-variant": "#002a61",
+                    "on-surface-variant": "#adaaaa",
+                    "primary-dim": "#0070eb",
+                    "on-secondary": "#525252",
+                    "surface": "#0e0e0e",
+                    "error-container": "#9f0519",
+                    "on-tertiary-container": "#60136d",
+                    "surface-variant": "#262626",
+                    "on-primary-fixed": "#000000",
+                    "inverse-on-surface": "#565554",
+                    "error-dim": "#d7383b",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-surface": "#ffffff",
+                    "surface-container-low": "#131313",
+                    "background": "#0e0e0e",
+                    "surface-container": "#1a1919",
+                    "secondary-dim": "#d6d4d3",
+                    "on-error-container": "#ffa8a3",
+                    "surface-container-lowest": "#000000",
+                    "tertiary-dim": "#e48fec",
+                    "inverse-surface": "#fcf8f8",
+                    "primary-container": "#6c9fff",
+                    "surface-dim": "#0e0e0e",
+                    "tertiary": "#fab0ff",
+                    "secondary-container": "#474747",
+                    "outline-variant": "#494847",
+                    "on-secondary-fixed": "#3f3f3f",
+                    "primary-fixed": "#6c9fff",
+                    "on-background": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .glass { background: rgba(19, 19, 19, 0.7); backdrop-filter: blur(20px); }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .active-press:active { transform: scale(0.98); background-color: rgba(255, 255, 255, 0.05); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#0e0e0e]/70 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,0,0,0.4)] bg-gradient-to-b from-[#131313] to-transparent">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt1z1RFYeAhKQV7Z3hM4RWxmorCYyYdJvoWJOXA3dxa2z-QZzj-_GUni2FjRooZXlRWRYXAjHi7FIMstj5-TdLB0dRzJiyFk_8SWOCP7wLJQ1wrLYlXHT09vSqVi1y16mQkff537knA5YdQSKImzvO-V8m3cL132HmLyWQXPx4QvOvTyZVSOQu0BXQBVjrNkMZb1Q_vca491Q8yI9Ak3zdvhIlXr_GetL4rsiLyxvT4HXGXuGPVJx5HfuJfXPZEFsHIi8Xy-LUVdM" style="">
+</div>
+<span class="font-headline font-bold tracking-tight text-white" style="">More</span>
+</div>
+<button class="text-blue-400 dark:text-[#85adff] hover:opacity-80 transition-opacity scale-95 active:scale-90 transition-transform duration-200" style="">
+<span class="material-symbols-outlined" style="">local_fire_department</span>
+</button>
+</header>
+<main class="pt-24 pb-40 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Profile Section -->
+<section class="relative group">
+<div class="absolute -inset-4 bg-gradient-to-tr from-primary-dim/10 to-tertiary-dim/10 rounded-[2.5rem] blur-2xl opacity-50"></div>
+<div class="relative bg-surface-container-low rounded-lg p-6 flex flex-col gap-6 shadow-2xl border border-white/5">
+<div class="flex items-end justify-between">
+<div>
+<p class="text-on-surface-variant font-label text-xs uppercase tracking-widest mb-1" style="">Elite Athlete</p>
+<h1 class="font-headline text-3xl font-extrabold tracking-tighter" style="">Alex Sterling</h1>
+</div>
+<div class="bg-primary/10 px-4 py-1 rounded-full border border-primary/20">
+<span class="text-primary font-label text-sm font-bold" style="">LVL 42</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-high rounded-md p-4 flex flex-col items-center justify-center text-center border border-white/5">
+<span class="text-on-surface-variant font-label text-[10px] uppercase tracking-wider mb-1" style="">Height</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-2xl font-bold" style="">188</span>
+<span class="text-on-surface-variant text-sm font-medium" style="">cm</span>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-md p-4 flex flex-col items-center justify-center text-center border border-white/5">
+<span class="text-on-surface-variant font-label text-[10px] uppercase tracking-wider mb-1" style="">Goal Weight</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-2xl font-bold" style="">92.0</span>
+<span class="text-on-surface-variant text-sm font-medium" style="">kg</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Training Diary/Calendar Link -->
+<section>
+<button class="w-full relative overflow-hidden bg-surface-container-low border border-white/5 rounded-lg p-5 flex items-center justify-between active-press transition-all duration-200" style="">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-xl text-primary border border-primary/20">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">calendar_month</span>
+</div>
+<div class="text-left">
+<h2 class="font-headline text-lg font-bold" style="">Training Diary</h2>
+<p class="text-on-surface-variant text-sm" style="">View full calendar &amp; workout history</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" style="">chevron_right</span>
+</button>
+</section>
+<!-- Deep Analytics Entry -->
+<section>
+<button class="w-full relative overflow-hidden bg-surface-container-highest rounded-lg p-6 text-left group active:scale-[0.98] transition-all duration-200 border border-white/10" style="">
+<div class="absolute top-0 right-0 p-8 opacity-20 group-hover:opacity-40 transition-opacity">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: &quot;FILL&quot; 1;">monitoring</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-lg" style="">insights</span>
+<span class="font-label text-xs font-bold uppercase tracking-widest" style="">Premium Feature</span>
+</div>
+<h2 class="font-headline text-xl font-bold mb-1" style="">Deep Analytics</h2>
+<p class="text-on-surface-variant text-sm max-w-[200px]" style="">30-day performance trends &amp; metabolic heatmap.</p>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-gradient-to-r from-primary-dim to-primary rounded-full shadow-[0_0_15px_rgba(133,173,255,0.4)]"></div>
+</div>
+</button>
+</section>
+<!-- Settings Groups -->
+<div class="space-y-6">
+<!-- Data Controls -->
+<div class="space-y-3">
+<h3 class="px-2 text-on-surface-variant font-label text-[11px] font-bold uppercase tracking-widest opacity-80" style="">Data Management</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden border border-white/5">
+<!-- CSV Export -->
+<div class="flex items-center justify-between p-4 border-b border-white/5 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="">file_export</span>
+</div>
+<div>
+<p class="font-medium text-sm" style="">Export Data</p>
+<p class="text-xs text-on-surface-variant" style="">Download .CSV workout history</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" style="">chevron_right</span>
+</div>
+<!-- CSV Import -->
+<div class="flex items-center justify-between p-4 border-b border-white/5 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="">file_upload</span>
+</div>
+<div>
+<p class="font-medium text-sm" style="">Import External Data</p>
+<p class="text-xs text-on-surface-variant" style="">Sync from Garmin or Apple Health</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" style="">chevron_right</span>
+</div>
+<!-- API Key -->
+<div class="flex items-center justify-between p-4 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="">key</span>
+</div>
+<div>
+<p class="font-medium text-sm" style="">Developer API</p>
+<p class="text-xs text-on-surface-variant" style="">Manage your athlete access keys</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" style="">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Preferences -->
+<div class="space-y-3">
+<h3 class="px-2 text-on-surface-variant font-label text-[11px] font-bold uppercase tracking-widest opacity-80" style="">Interface</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden border border-white/5">
+<!-- Theme Toggle -->
+<div class="flex items-center justify-between p-4 border-b border-white/5 active:bg-white/[0.03] transition-all cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">dark_mode</span>
+</div>
+<div>
+<p class="font-medium text-sm" style="">OLED Dark Mode</p>
+<p class="text-xs text-on-surface-variant" style="">Current: Kinetic Noir</p>
+</div>
+</div>
+<div class="w-12 h-6 bg-primary-dim rounded-full relative flex items-center px-1">
+<div class="w-4 h-4 bg-white rounded-full ml-auto shadow-lg"></div>
+</div>
+</div>
+<!-- Units -->
+<div class="flex items-center justify-between p-4 hover:bg-white/[0.03] active:bg-white/[0.08] transition-all cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-surface-container-highest rounded-full text-on-surface-variant group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="">straighten</span>
+</div>
+<div>
+<p class="font-medium text-sm" style="">Measurement Units</p>
+<p class="text-xs text-on-surface-variant" style="">Metric (kg, cm, km)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm" style="">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Security & Danger Zone -->
+<div class="space-y-3">
+<h3 class="px-2 text-error/80 font-label text-[11px] font-bold uppercase tracking-widest opacity-80" style="">Advanced Operations</h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden border border-error/10">
+<button class="w-full flex items-center gap-4 p-4 hover:bg-error/5 active:bg-error/10 transition-all text-error group" style="">
+<div class="w-10 h-10 flex items-center justify-center bg-error/10 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl" style="">delete_forever</span>
+</div>
+<div class="text-left">
+<p class="font-bold text-sm" style="">App Reset</p>
+<p class="text-[10px] text-error/60 uppercase tracking-tighter" style="">Wipe all local and synced data</p>
+</div>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<p class="text-center text-[10px] text-on-surface-variant uppercase tracking-[0.2em] opacity-40" style=""><br></p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#131313]/90 backdrop-blur-2xl rounded-t-[2.5rem] border-t border-white/5 shadow-[0px_-10px_30px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:text-white transition-all active:scale-90" href="#" style="">
+<span class="material-symbols-outlined mb-1 text-2xl" style="">dashboard</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase" style="">Dash</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:text-white transition-all active:scale-90" href="#" style="">
+<span class="material-symbols-outlined mb-1 text-2xl" style="">restaurant</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase" style="">Eats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:text-white transition-all active:scale-90" href="#" style="">
+<span class="material-symbols-outlined mb-1 text-2xl" style="">fitness_center</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase" style="">Gym</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#adaaaa] px-4 py-2 hover:text-white transition-all active:scale-90" href="#" style="">
+<span class="material-symbols-outlined mb-1 text-2xl" style="">monitoring</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase" style="">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#0070eb]/10 text-[#85adff] rounded-2xl px-5 py-2 scale-105 border border-[#85adff]/20 transition-all" href="#" style="">
+<span class="material-symbols-outlined mb-0.5 text-2xl" style="font-variation-settings: &quot;FILL&quot; 1;">more_horiz</span>
+<span class="font-['Inter'] text-[9px] font-bold tracking-wider uppercase" style="">More</span>
+</a>
+</nav>
+</body></html>

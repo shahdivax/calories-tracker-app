@@ -1,0 +1,85 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+*.hprof
+.DS_Store
+Thumbs.db
+.atom/
+.orig
+
+# Local environment / secrets (commit .env.example if you use env files)
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+
+# Tooling / editor (uncomment if you do not want these in the repo)
+# .vscode/
+# .cursor/
+
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter / Dart / Pub
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+coverage/
+
+# Local pub overrides (path deps, melos, etc.) — do not push machine-specific overrides
+pubspec_overrides.yaml
+
+# FVM — keep .fvm/fvm_config.json in version control if you use FVM
+.fvm/flutter_sdk
+
+# Symbolication / obfuscation
+app.*.symbols
+app.*.map.json
+.agents/
+
+# Android — Gradle outputs and caches (avoids huge pushes and GitHub file-size limits)
+/android/.gradle/
+/android/build/
+/android/app/build/
+/android/app/debug/
+/android/app/profile/
+/android/app/release/
+/android/captures/
+/android/local.properties
+
+# iOS — Xcode build folder (Pods, Flutter ephemeral, etc. are in ios/.gitignore)
+/ios/build/
+
+# Signing & distribution (never commit keystores or store passwords)
+# If you use Firebase, restrict keys in console; many teams still commit
+# google-services.json / GoogleService-Info.plist — add them here only if your policy forbids it.
+*.jks
+*.keystore
+*.p12
+*.mobileprovision
+**/key.properties
+
+# Node (if any JS tooling lands in the repo)
+node_modules/
+
+# Melos (monorepo tool)
+.melos_tool/
